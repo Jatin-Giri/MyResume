@@ -1,65 +1,222 @@
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-color: #111 #000;
+}
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #111;
+  background-color: #000;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
- 
+  color: #fff;
 }
 
-*,*::before, *::after{
-  perspective: 800px;
- transform-style: preserve-3d;
+*,
+*::before,
+*::after {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+:root {
+  --mg: 70px;
+  --bg: #000;
+  --shadow: #fff;
+  --w: #fff;
 }
 
-
-header{
+header {
   width: 100%;
   height: 100vh;
 }
 
-#intro{
- width: 100%;
- height: 100%;
- background-color: hsla(146, 50%, 36%,.2);
- transition: all ease .3s;
- transform-origin: bottom;
+#intro {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: grid;
+  /* border: 3px solid red; */
+  grid-template-columns: repeat(22, minmax(60px, 1fr));
+  grid-template-rows: repeat(10, minmax(60px, 1fr));
+  overflow: hidden;
 }
 
-#intro:hover{
-  animation: rt 1s ease both;
+#intro img {
+  width: 100%;
 }
-@keyframes rt{
-  to{
-    transform: rotateX(60deg);
+
+#intro img:nth-child(n) {
+  animation: shakeR 7s ease infinite;
+  transition: all 0.4s ease-in-out;
+}
+#intro img:nth-child(2n) {
+  animation: shakeL 7s ease infinite;
+  transition: all 0.4s ease-in-out;
+}
+@keyframes shakeR {
+  25% {
+    transform: translate(3px, 3px);
+  }
+  75% {
+    transform: translate(-3px, -3px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes shakeL {
+  25% {
+    transform: translate(-3px, -3px);
+  }
+  75% {
+    transform: translate(3px, 3px);
+  }
+  100% {
+    transform: translate(0px, 0px);
   }
 }
 
-
-
-
-
-.box {
-  padding: 40px 120px;
-  display: grid;
-  grid-template-columns: repeat(3,minmax(40px,1fr)); 
-  gap: 100px;
-}
-.box > *{
-  box-shadow: 0 0 10px #000;
-}
-
-.box #about{
+/* #intro img:nth-child(2) {
   grid-column: span 2;
-  padding: 50px 40px;
-  text-align: center;
+  grid-row: span 2;
+} */
+
+#intro .earth {
+  animation: none;
+  animation-timing-function: 0;
+  position: absolute;
+  bottom: -50%;
+  width: 100%;
+  z-index: -1;
+}
+#intro > *{
+  z-index: 1;
+}
+#intro img:not(.earth){
+  z-index: 22;
+  transition: scale .3s ease-in-out;
+}
+#intro img:hover:not(.earth){
+scale: 1.2;
+}
+#intro #mars {
+  grid-column: 21/22;
+  grid-row: 7/8;
+  filter: drop-shadow(5px 5px 5px red);
+}
+#intro #jupiter {
+  grid-column: 19/20;
+  grid-row: 6/7;
+  scale: .65;
+}
+#intro #saturn{
+  grid-column: 16/17;
+  grid-row: 5/6;
+  scale: .45;
+}
+#intro #uranus{
+  grid-column: 11/12;
+  grid-row: 4/5;
+  scale: .45;
+}
+#intro #neptune{
+  grid-column: 4/5;
+  grid-row: 5/6;
+  scale: .45;
+}
+#intro .name {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-300px);
+  font-family: monospace;
+  font-size: 100px;
+  z-index: 3;
+  width: max-content;
 }
 
-.box img{
-  grid-column: 3/4;
-  border-radius: 20%;
+/* -----------main---------------- */
+
+main {
+  padding: 0 var(--mg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--mg);
+}
+main > * {
+  box-sizing: border-box;
+  background-color: var(--bg);
+  box-shadow: 0 0 20px var(--shadow);
   width: 100%;
+  height: calc(100vh - 140px);
+}
+
+/* ------------box > about + img -------------- */
+.box {
+  margin-top: var(--mg);
+  display: grid;
+  place-items: center;
+  /* border: 2px solid blue; */
+  grid-template-columns: repeat(3, minmax(40px, 1fr));
+  gap: 0;
+}
+.box > * {
+  box-shadow: 0 0 10px var(--shadow);
+  height: 100%;
+}
+.box #about {
+  grid-column: span 2;
+  box-sizing: border-box;
+  padding: 50px 40px;
+  height: 100%;
+  /* text-align: center; */
+  font-size: 20px;
+}
+.box img {
+  width: 100%;
+  filter: drop-shadow(0 0 10px #fff);
+}
+.box .img {
+  grid-column: 3/4;
+  /* border-radius: 5%; */
+  border-top: 5px 6px 15px 25px;
+  width: 100%;
+}
+
+/* ----------------------Skills-------------------------- */
+.skills {
+  padding: 20px;
+}
+.skills img {
+  width: 50px;
+  drop-shodow: 20px 20px red;
+}
+.skills h1 {
+  line-height: 1;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+.skills div {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 20px;
+}
+.skills .project-links a {
+  text-decoration: none;
+  color: var(--w);
+  border: 1px solid var(--w);
+  padding: 5px 10px;
+}
+
+/* -------------------footer------------------------- */
+footer {
+  width: 100%;
+  height: calc(100vh - 100px);
+  box-shadow: 0 0 20px var(--shadow);
+  margin: 50px 0;
 }
