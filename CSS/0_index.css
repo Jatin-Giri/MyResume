@@ -24,7 +24,7 @@ body {
 :root {
   --mg: 70px;
   --bg: #000;
-  --shadow: #fff;
+  --shadow: #4a4a4a;
   --w: #fff;
 }
 
@@ -46,6 +46,7 @@ header {
 
 #intro img {
   width: 100%;
+  box-shadow: none;
 }
 
 #intro img:nth-child(n) {
@@ -132,7 +133,7 @@ scale: 1.2;
   left: 50%;
   top: 50%;
   transform: translateX(-300px);
-  font-family: Dancingscript;
+  font-family: 'Dancingscript';
   font-size: 100px;
   z-index: 3;
   width: max-content;
@@ -160,30 +161,45 @@ main > * {
   display: grid;
   place-items: center;
   /* border: 2px solid blue; */
-  grid-template-columns: repeat(3, minmax(40px, 1fr));
-  gap: 0;
+  grid-template-columns: repeat(4, minmax(40px, 1fr));
+  gap: 20px;
 }
 .box > * {
-  box-shadow: 0 0 10px var(--shadow);
+  /* box-shadow: 0 0 10px var(--shadow); */
   height: 100%;
+  /* border: 2px solid green; */
 }
 .box #about {
   grid-column: span 2;
   box-sizing: border-box;
   padding: 50px 40px;
   height: 100%;
-  /* text-align: center; */
   font-size: 20px;
 }
+#about p{
+  /* border: 3px solid red; */
+  /* margin-right: ; */
+  width: 400px;
+}
+#about a{
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Tribune';
+  color: orange;
+}
 .box img {
-  width: 100%;
+  width: 70%;
   filter: drop-shadow(0 0 10px #fff);
+  background-size: cover;
+  /* height: 100%; */
 }
 .box .img {
-  grid-column: 3/4;
+  align-items: center;
+  justify-content: center;
+  grid-column: span 2;
   /* border-radius: 5%; */
   border-top: 5px 6px 15px 25px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 /* ----------------------Skills-------------------------- */

@@ -85,6 +85,10 @@
     font-family: 'Zeyada';
     src: url('/Fonts/Zeyada-Regular.woff2');
 }
+@font-face{
+    font-family:  "Tribune";
+    src: url('/Fonts/Tribune.otf');
+}
 
 
 
