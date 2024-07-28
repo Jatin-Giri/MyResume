@@ -209,15 +209,15 @@ main > * {
 .skills {
   padding: 20px;
 }
-.skills img {
+.skills div a img {
   width: 50px;
-  drop-shodow: 20px 20px red;
+  filter: drop-shadow(0 0 1px #fff);
 }
 .skills h1 {
   line-height: 1;
   margin: 0;
   margin-bottom: 10px;
-  font-size: 25px;
+  font-size: 35px;
 }
 .skills div {
   display: flex;
@@ -233,9 +233,32 @@ main > * {
 }
 
 /* -------------------footer------------------------- */
+@property --angle {
+  syntax: "<ang>";
+  inherits: true;
+  initial-value: 40deg;
+}
 footer {
   width: 100%;
+  margin: 150px;
   height: calc(100vh - 100px);
   box-shadow: 0 0 20px var(--shadow);
-  margin: 50px 0;
+  /* margin: 50px 0; */
+  /* opacity: 0.3; */
+  border-radius: 20px;
+  background-image: conic-gradient(
+    from 0deg,
+    hsla(0, 0%, 100%,0.3),hsla(0, 0%, 50%,0.3),
+    hsla(0, 0%, 100%,0.3),hsla(0, 0%, 50%,0.3),
+    hsla(0, 0%, 100%,0.3),hsla(0, 0%, 50%,0.3),
+    hsla(0, 0%, 100%,0.3),hsla(0, 0%, 50%,0.3),
+    hsla(0, 0%, 100%,0.3),hsla(0, 0%, 50%,0.3),
+    hsla(0, 0%, 100%,0.3),hsla(0, 0%, 50%,0.3),
+    hsla(0, 0%, 100%,0.3),hsla(0, 0%, 50%,0.3),
+    hsla(0, 0%, 100%,0.3),hsla(0, 0%, 50%,0.3),
+    hsla(0, 0%, 100%,0.3),hsla(0, 0%, 50%,0.3),
+    hsla(0, 0%, 100%,0.3),hsla(0, 0%, 50%,0.3),
+    hsla(0, 0%, 100%,0.3),hsla(0, 0%, 50%,0.3),
+    hsla(0, 0%, 100%,0.3),hsla(0, 0%, 50%,0.3)
+  );
 }
