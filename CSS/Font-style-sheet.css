@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Anton';
+    src: url('/Fonts/AntonSC-Regular.woff2');
+}
+@font-face {
+    font-family: 'Blackink' ;
+    src: url('/Fonts/BlakaInk-Regular.woff2');
+}
+@font-face {
+    font-family: 'BungeeSpice';
+    src: url('/Fonts/BungeeSpice-Regular.woff2');
+}
+@font-face{
+    font-family: 'Dancingscript';
+    src: url('/Fonts/DancingScript-VariableFont_wght.woff2');
+}
+@font-face {
+    font-family: 'Foldit';
+    src: url('/Fonts/Foldit-VariableFont_wght.woff2');
+}
+
+@font-face {
+    font-family: 'Honk';
+    src: url('/Fonts/Honk-Regular-VariableFont_MORF\,SHLN.woff2');
+}
+@font-face {
+    font-family: 'IndieFlower';
+    src: url('/Fonts/IndieFlower-Regular.woff2');
+}
+@font-face {
+    font-family: 'Barcode';
+    src: url('/Fonts/LibreBarcode128Text-Regular.woff2');
+}
+@font-face {
+    font-family: 'Nabla';
+    src: url('/Fonts/Nabla-Regular-VariableFont_EDPT\,EHLT.woff2');
+}
+@font-face {
+    font-family: 'Pacifico';
+    src: url('/Fonts/Pacifico-Regular.woff2');
+}
+@font-face {
+    font-family: 'PlaywriteCU';
+    src: url('/Fonts/PlaywriteCU-ExtraLight.woff2');
+}
+@font-face {
+    font-family: 'PlaywriteHR';
+    src: url('/Fonts/PlaywriteHR-VariableFont_wght.woff2');
+}
+@font-face {
+    font-family: 'PlaywritePE';
+    src: url('/Fonts/PlaywritePE-VariableFont_wght.woff2');
+}
+@font-face {
+    font-family: 'Rajdhani';
+    src: url('/Fonts/Rajdhani-Regular.woff2');
+}
+@font-face {
+    font-family: 'RobotoItalic';
+    src: url('/Fonts/RobotoMono-Italic-VariableFont_wght.woff2');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('/Fonts/RobotoMono-VariableFont_wght.woff2');
+}
+
+
+@font-face {
+    font-family: 'blackone';
+    src: url('/Fonts/BlackOpsOne-Regular.woff2');
+}
+@font-face {
+    font-family: 'Caveat';
+    src: url('/Fonts/Caveat-VariableFont_wght.woff2');
+}
+@font-face {
+    font-family: 'Codystar';
+    src: url('/Fonts/Codystar-Regular.woff2');
+}
+@font-face {
+    font-family: 'GreatVibes';
+    src: url('/Fonts/GreatVibes-Regular.woff2');
+}
+@font-face {
+    font-family: 'Zeyada';
+    src: url('/Fonts/Zeyada-Regular.woff2');
+}
+
+
+
+/* -------------------------------------- */
+.box-1{
+    font-family: 'Anton';
+}
+.box-2{
+    font-family: 'Blackink';
+}
+.box-3{
+    font-family: 'BungeeSpice';
+}
+.box-4{
+    font-family: 'Dancingscript';
+}
+.box-5{
+    font-family: 'Foldit';
+}
+.box-6{
+    font-family: 'Honk';
+}
+.box-7{
+font-family: 'IndieFlower';
+}
+.box-8{
+font-family: 'Barcode';
+}
+.box-10{
+font-family: 'Nabla';
+}
+.box-11{
+font-family: 'Pacifico';
+}
+.box-12{
+font-family: 'PlaywriteCU';
+}
+.box-13{
+font-family:'PlaywriteHR' ;
+}
+.box-14{
+font-family: 'PlaywritePE';
+}
+.box-15{
+    font-family: 'Rajdhani';
+}
+.box-16{
+    font-family: 'RobotoItalic';
+}
+.box-17{
+    font-family: 'Roboto';
+}
