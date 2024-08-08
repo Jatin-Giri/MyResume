@@ -1,0 +1,41 @@
+.box {
+    margin-top: var(--mg);
+    display: grid;
+    place-items: center;
+    /* border: 2px solid blue; */
+    grid-template-columns: repeat(4, minmax(40px, 1fr));
+    gap: 20px;
+  }
+  .box > * {
+    height: 100%;
+  }
+  .box #about {
+    grid-column: span 2;
+    box-sizing: border-box;
+    padding: 50px 40px;
+    height: 100%;
+    font-size: 20px;
+    /* border: 3px solid red; */
+  }
+  #about p {
+    width: 400px;
+  }
+  #about a {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Tribune";
+    color: orange;
+  }
+  
+  .box #img {
+    width: 100%;
+    grid-column: span 2;
+    /* border: 3px solid green; */
+    /* border-top: 5px 6px 15px 25px; */
+    background-image: url("/Assets/img8.jpg");
+    background-repeat: no-repeat;
+    background-position:right;
+    background-attachment: fixed;
+    background-size: contain;
+  }
+  

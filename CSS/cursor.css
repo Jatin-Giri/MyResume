@@ -1,0 +1,12 @@
+header{
+    cursor: url('/cursor-img/light-saber\ \(2\).cur'), auto;
+}
+body, .box{
+    cursor: url('/cursor-img/wand1.cur'), auto;
+}
+a{
+    cursor: url('/cursor-img/wand2.cur'), auto;
+}
+.skills{
+    cursor: url('/cursor-img/wand3.cur'), auto;
+}

@@ -1,0 +1,25 @@
+.skills {
+    padding: 20px;
+  }
+  .skills div a img {
+    width: 50px;
+    filter: drop-shadow(0 0 1px #fff);
+  }
+  .skills h1 {
+    line-height: 1;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 35px;
+  }
+  .skills div {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px;
+  }
+  .skills .project-links a {
+    text-decoration: none;
+    color: var(--w);
+    border: 1px solid var(--w);
+    padding: 5px 10px;
+  }
